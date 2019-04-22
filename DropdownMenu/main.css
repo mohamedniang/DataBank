@@ -1,0 +1,84 @@
+html {
+    font-family: "Champagne & Limousines";
+    font-weight: thin;
+    font-size: 1.2em;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    background-color: rgb(32, 31, 31);
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+ul li a {
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+ul li a:hover {
+    background-color: rgb(75, 73, 73);
+}
+ul ul {
+    position: absolute;
+    min-width: 250px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+ul ul li {
+    display: block;
+    margin: 0;
+}
+ul li:hover ul {
+    display: block;
+}
+ul li i {
+    float: right;
+    padding-left: 15px;
+    color: rgb(255, 255, 255);
+}
+
+ul > li > ul > li:nth-child(1) > ul{
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    min-width: 250px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+ul > li > ul > li:nth-child(1):hover > ul {
+    display: block;
+}
+ul > li > ul > li:nth-child(2) > ul{
+    position: absolute;
+    left: 250px;
+    top: 52px;
+    min-width: 250px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+ul > li > ul > li:nth-child(2):hover > ul {
+    display: block;
+}
+ul > li > ul > li:nth-child(3) > ul{
+    position: absolute;
+    left: 250px;
+    top: 104px;
+    min-width: 250px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+ul > li > ul > li:nth-child(3):hover > ul {
+    display: block;
+}
+
+
+/* this code have been downloaded from a website =) */
