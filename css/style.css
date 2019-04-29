@@ -1,0 +1,235 @@
+html {
+  /* font-family: 'Montserrat-Black'; */
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*HEADER*/
+ /* {
+    background-color: rgba(0,0,0,0.1);
+    padding: 2px;
+    color: rgba(0,0,0,0.5);
+    font-size: 1.5em;
+    
+    box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.4);
+} */
+.icon-estm {
+    margin-left: 5%;
+}
+.ctn-search {
+    margin-left: 12%;
+    margin-right: 12%;
+    /*width: 50px;*/
+}
+.search-frm {
+    display: inline-block;
+    width: 25%;
+    height: 35px;
+}
+
+
+.input-search {
+    width: 100%;
+    height: 100%;
+    
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    
+    color: rgba(0,0,0,0.5);
+    border-radius: 5px 5px;
+}
+.user {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    margin-left: 1%;
+}
+
+
+
+/*MENU TOOLTIP*/
+/*tooltip for text*/
+	.tooltips .tooltiptext {
+		visibility: hidden;
+		width: 180px;
+
+		background-color: #fff;
+		box-shadow: 1px 1px 1px 0.1px #444;
+
+		text-align: left;
+        font-size: 0.9em;
+
+		/*position: the tooltip text*/
+		position: absolute;
+		z-index: 2;
+		opacity: 0.9;
+        
+        top: 70px;
+        right: 44px;
+        display: inline-flex;
+        flex-direction: column;
+	}
+
+	/*show the tooltip text when the mouse over the tooltip container*/
+	.tooltips:hover .tooltiptext {
+		visibility: visible;
+	}
+	.tooltips .tooltiptext::after {
+	  content: " "; /*POUR CREER UNE FLECHE*/
+      border-color: transparent transparent rgba(0,0,0,0.3) transparent; /*POUR DONNER L'ORIENTATION ET LA POSITION DE LA FLECHE CREER*/
+        
+	  position: absolute;
+	  bottom: 100%;  /* At the top of the tooltip */
+	  left: 22%;
+	  margin-left: 50px;
+	  border-width: 5px;
+	  border-style: solid;
+	}
+
+	.tooltiptext .elt-M {
+		text-decoration: none;
+		color: rgba(0,0,0,0.5);
+/*        font-weight: bold;*/
+		display: block;
+        padding: 5px;
+        font-size: 1em;
+	}
+	.tooltiptext .elt-M:hover {
+		background-color: rgba(0,0,0,0.2);
+		color: #fff;
+	}
+    .elt-M img {
+        margin-right: 5%;
+        margin-bottom: -2%;
+    }
+
+
+/*MENU SIDE*/
+.titre-menu {
+    margin-left: 5%;
+}
+
+
+
+
+/*
+    PAGES DU SITE
+*/
+.pagemenu, .pagebody {
+    display: inline-block;
+/*    margin-top: 4%;*/
+}
+
+/* PAGE HEADER */
+.pagehead {
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+#hdb{
+    border-bottom: 3px solid #3992a0;
+}
+
+/* PAGES DU MENU */
+.pagemenu {
+    /*width: 18%;*/
+    
+}
+
+/* PAGES DU BODY */
+.pagebody {
+/*    background-color: #eee;*/
+    width: 100%;
+    /* float: right; */
+    
+    padding: 20px;
+}
+
+/*FOOTER*/
+.archipages {
+    position: relative;
+    bottom: 0;
+    max-height: 0;
+}
+
+
+
+
+/*
+    MODAL POUR VISIONNER LES IMAGES
+    OPEN A MODAL IMAGE ZONE
+*/
+/*
+.thumbnail {
+    cursor: pointer;
+}
+		#myImg {
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+		#myImg:hover { opacity: 0.7; }
+
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			padding-top: 100px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+		}
+
+		.modal-content {
+			margin: auto;
+			display: block;
+			width: 45%;
+		}
+
+		#caption {
+			margin: auto;
+			display: block;
+			width: 80%;
+			text-align: center;
+			color: #ccc;
+			padding: 10px;
+			height: 150px;
+		}
+
+		.modal-content, #caption {
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+		@keyframes zoom {
+			from { transform: scale(0); }
+			to { transform: scale(1); }
+		}
+
+		.close {
+			position: absolute;
+			top: 75px;
+			right: 35px;
+			color: #f1f1f1;
+			font-size: 40px;
+			transition: 0.3s;
+		}
+		.close:hover, .close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.modal-content {
+				width: 100%;
+			}
+		}*/
