@@ -9,10 +9,10 @@
       $info[] = $row;
     }
 ?>
-<div class="bs-docs-section">
-  <h1 id="thumbnails" class="page-header">Vidéos E.S.T.M.</h1>
+<div class="bs-docs-section container">
+  <h1 id="thumbnails" class="titre">Vidéos E.S.T.M.</h1>
 
-      <div class="col">
+      <div class="">
 
         <div class="col-xs-12 col-sm-12">
           <div class="row">
@@ -21,8 +21,8 @@
     foreach ($info as $video) {
      ?>
 
-            <div class="col-xs-6 col-lg-3">
-              <h2><?=$video->TITRE?></h2>
+            <div class="col-xs-3 col-lg-6">
+              <h2 class="sousTitre"><?=$video->TITRE?></h2>
                 <a href="#" class="thumbnail">
                   <video src="donnees/videos/<?=$video->CONTENUDOC?>" width="100%" height="100%" controls></video>
                 </a>
@@ -30,3 +30,7 @@
             </div><!--/.col-xs-6.col-lg-4-->
     <?php }
 ?>
+</div>
+</div>
+</div>
+</div>

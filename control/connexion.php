@@ -2,8 +2,13 @@
 		
 	$host = 'localhost';
 	$dbname = 'databank';
+<<<<<<< HEAD
 	$dbuser = 'root';
 	$dbpwd = '';
+=======
+	$dbuser = 'phpmyadmin';
+	$dbpwd = 'admin';
+>>>>>>> 645df30e678996b9a5151d91d2ed0d31a6a03386
 
 	try{
 		$conx = new PDO('mysql:host='.$host.'; dbname='.$dbname,$dbuser,$dbpwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));

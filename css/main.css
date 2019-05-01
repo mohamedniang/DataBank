@@ -123,6 +123,15 @@ ul > li > ul > li:nth-child(3):hover > ul {
     padding: 0;
     margin: 10px 0;
 }
+.demiTitre{
+    color: #77c7d3;
+    font-size: 40px;
+    line-height:60px;
+    font-weight: 700;
+    font-family: 'Montserrat-Black';
+    padding: 0;
+    margin: 10px 0;
+}
 .sousTitre{
     color: #3992a0;
     font-size: 15px;
@@ -131,6 +140,17 @@ ul > li > ul > li:nth-child(3):hover > ul {
     font-family: 'Montserrat-Black';
     padding: 0;
     margin: 0;
+}
+.titreSection{
+    color: #77c7d3;
+    font-size: 30px;
+    line-height:60px;
+    font-weight: 700;
+    font-family: 'Montserrat-Black';
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #3992a0;
+    border-radius: 50px;
 }
 .marque{
     color: rgb(218, 103, 103);
@@ -149,4 +169,8 @@ a:hover{
 }
 .fontify{
     font-family: 'Montserrat-Light';
+}
+.icon-right{
+    float: right;
+    line-height: 0.2;
 }

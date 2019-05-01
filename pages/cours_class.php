@@ -1,9 +1,10 @@
 
-<div class="bs-docs-section">
-  <h1 id="responsive-embed" class="page-header">COURS GENIE LOGICIEL & ADMINISTRATION RESEAUX ESTM</h1>
-
-    <br>
-
+<div class="container">
+  <h1 id="responsive-embed" class="titre">
+    COURS
+    <span class="demiTitre">Licence 1</span>
+    <span class="sousTitre">Génie Logiciel & Administration Réseau</span>
+  </h1>
 <div class="row">
     <?php
 
@@ -28,7 +29,7 @@
 </div>
 
 <div class="bs-docs-section">
-  <h1 id="thumbnails" class="page-header">DOCUMENTS IMAGES</h1>
+  <h1 id="thumbnails" class="titreSection">Documentation avec images <i class="fas fa-sort-down fa-3x icon-right" ></i></h1>
 
   <div class="bs-example" data-example-id="simple-thumbnails">
     <div class="row">
@@ -49,7 +50,7 @@
     
     
 <div class="bs-docs-section">
-  <h1 id="thumbnails" class="page-header">DOCUMENTS TEXTES</h1>
+  <h1 id="thumbnails" class="titreSection">Documentation écrite <i class="icon-right fas fa-sort-down fa-3x"></i></h1>
     
   <div class="bs-example" data-example-id="thumbnails-with-custom-content">
     <div class="row">
