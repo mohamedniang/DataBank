@@ -1,56 +1,66 @@
 <?php
-  global $conx;
+global $conx;
 
-    // SELECTIONNER LES PDF
-    $req = $conx->query("SELECT * FROM documentations WHERE documentations.`FORMAT` = 'pdf'");
-    $tab = array();
-
-    while ($row = $req->fetchObject()) {
-      $tab[] = $row;
-    }
+// SELECTIONNER LES PDF
+$req = $conx->query("SELECT * FROM documentations WHERE documentations.`FORMAT` = 'pdf'");
+$tab = array();
+if ($req) {
+  while ($row = $req->fetchObject()) {
+    $tab[] = $row;
+  }
+}
 ?>
           
 <?php
 
-  // MODIFIER LE TITRE
-  function gestion($titre,$code){
-    global $conx;
+// MODIFIER LE TITRE
+function gestion($titre, $code)
+{
+  global $conx;
 
-    // $type = 1;
-    $a = array('TITRE' => $titre,
-          'CODEDOC' => $code);
-    $req = $conx->prepare("UPDATE documentations SET TITRE = :TITRE WHERE CODEDOC = :CODEDOC");
-    $modif = $req->execute($a);
+  // $type = 1;
+  $a = array(
+    'TITRE' => $titre,
+    'CODEDOC' => $code
+  );
+  $req = $conx->prepare("UPDATE documentations SET TITRE = :TITRE WHERE CODEDOC = :CODEDOC");
+  $modif = $req->execute($a);
 
-    return $modif;
-  }
+  return $modif;
+}
 
-  // BLOQUER LE DOCUMENT
-  function bloquer($code){
-    global $conx;
+// BLOQUER LE DOCUMENT
+function bloquer($code)
+{
+  global $conx;
 
-    $id = 1;
-    $a = array('IDOC' => $id,
-          'CODEDOC' => $code);
-    $req = $conx->prepare("UPDATE documentations SET IDOC = :IDOC WHERE CODEDOC = :CODEDOC");
-    $bloquer = $req->execute($a);
+  $id = 1;
+  $a = array(
+    'IDOC' => $id,
+    'CODEDOC' => $code
+  );
+  $req = $conx->prepare("UPDATE documentations SET IDOC = :IDOC WHERE CODEDOC = :CODEDOC");
+  $bloquer = $req->execute($a);
 
-    return $bloquer;
-  }
+  return $bloquer;
+}
 
-  // DEBLOQUER LE DOCUMENT
-  function debloquer($code){
-    global $conx;
+// DEBLOQUER LE DOCUMENT
+function debloquer($code)
+{
+  global $conx;
 
-    $id = 0;
-    $a = array('IDOC' => $id,
-          'CODEDOC' => $code);
-    $req = $conx->prepare("UPDATE documentations SET IDOC = :IDOC WHERE CODEDOC = :CODEDOC");
-    $bloquer = $req->execute($a);
+  $id = 0;
+  $a = array(
+    'IDOC' => $id,
+    'CODEDOC' => $code
+  );
+  $req = $conx->prepare("UPDATE documentations SET IDOC = :IDOC WHERE CODEDOC = :CODEDOC");
+  $bloquer = $req->execute($a);
 
-    return $bloquer;
-  }
-  ?>
+  return $bloquer;
+}
+?>
 
 
 
@@ -58,16 +68,16 @@
 <?php
 if (isset($_POST['submit'])) {
   if (empty($_POST['CODEDOC']) && empty($_POST['TITRE'])) {
-      $notifications = "Pour voir le code référence place le curseur sur le boutton modifier.";
-      $class = "alert-warning";
-  }else{
+    $notifications = "Pour voir le code référence place le curseur sur le boutton modifier.";
+    $class = "alert-warning";
+  } else {
     $code = htmlspecialchars($_POST['CODEDOC']);
     $titre = htmlspecialchars(addslashes($_POST['TITRE']));
 
-    if(gestion($titre,$code) == 1){
-        $notifications = "Le titre a bien été modifié.";
-        $class = "alert-info";
-    }else{
+    if (gestion($titre, $code) == 1) {
+      $notifications = "Le titre a bien été modifié.";
+      $class = "alert-info";
+    } else {
       $notifications = "Une erreure s'est produite. Veuillez nous excuser.";
       $class = "alert-warning";
     }
@@ -77,15 +87,15 @@ if (isset($_POST['submit'])) {
 // BLOQUER LE DOCUMENT
 if (isset($_POST['sublock'])) {
   if (empty($_POST['CODEDOC'])) {
-      $notifications = "Pour voir le code référence placez le curseur sur le boutton bloquer.";
-      $class = "alert-warning";
-  }else{
+    $notifications = "Pour voir le code référence placez le curseur sur le boutton bloquer.";
+    $class = "alert-warning";
+  } else {
     $code = htmlspecialchars($_POST['CODEDOC']);
 
-    if(bloquer($code) == 1){
-        $notifications = "Le document a bien été bloqué.";
-        $class = "alert-info";
-    }else{
+    if (bloquer($code) == 1) {
+      $notifications = "Le document a bien été bloqué.";
+      $class = "alert-info";
+    } else {
       $notifications = "Une erreure s'est produite. Veuillez nous excuser.";
       $class = "alert-warning";
     }
@@ -96,15 +106,15 @@ if (isset($_POST['sublock'])) {
 // DEBLOQUER VIDEOS
 if (isset($_POST['subUnlock'])) {
   if (empty($_POST['CODEDOC'])) {
-      $notifications = "Pour voir le code référence placez le curseur sur le boutton bloquer.";
-      $class = "alert-warning";
-  }else{
+    $notifications = "Pour voir le code référence placez le curseur sur le boutton bloquer.";
+    $class = "alert-warning";
+  } else {
     $code = htmlspecialchars($_POST['CODEDOC']);
 
-    if(debloquer($code) == 1){
-        $notifications = "Le document a bien été débloqué.";
-        $class = "alert-info";
-    }else{
+    if (debloquer($code) == 1) {
+      $notifications = "Le document a bien été débloqué.";
+      $class = "alert-info";
+    } else {
       $notifications = "Une erreure s'est produite. Veuillez nous excuser.";
       $class = "alert-warning";
     }

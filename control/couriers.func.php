@@ -1,42 +1,44 @@
 
 <?php
 
-	// AUTORISER UN COMPTE
-	function autoriser($to){
-		global $conx;
+// AUTORISER UN COMPTE
+function autoriser($to)
+{
+	global $conx;
 
-		$c = 0;
-		$e = 0;
-		$a = array('EMAIL' => $to,
-					'COURIER' => $c,
-					'ETAT' => $e);
-		$req = $conx->prepare("UPDATE utilisateur SET COURIER = :COURIER, ETAT = :ETAT WHERE EMAIL = :EMAIL");
-		$user = $req->execute($a);
-		return $user;
-	}
-	// FIN AUTORISER COMPTE
+	$c = 0;
+	$e = 0;
+	$a = array(
+		'EMAIL' => $to,
+		'COURIER' => $c,
+		'ETAT' => $e
+	);
+	$req = $conx->prepare("UPDATE utilisateur SET COURIER = :COURIER, ETAT = :ETAT WHERE EMAIL = :EMAIL");
+	$user = $req->execute($a);
+	return $user;
+}
+// FIN AUTORISER COMPTE
 
 
-	// ENVOYER UN EMAIL
-	// function envoyerMail($to,$sujet,$texte){}
-	// FIN ENVOI EMAIL
+// ENVOYER UN EMAIL
+// function envoyerMail($to,$sujet,$texte){}
+// FIN ENVOI EMAIL
 ?>
 
 
 <?php
 // AUTORISER UN COMPTER
 if (isset($_POST['courier'])) {
-  $matri = htmlspecialchars($_POST['MATRICULE']);
-  if (!empty($matri)) {
-    if (autoriser($matri) == 1) {
-      $notifications = "Le compte de l'utilisateur est maintenant autorisé";
-      $class = "alert-info";
-    }
-
-  }else{
-    $notifications = "Veuillez saisir un matricule";
-    $class = "alert-warning";
-  }
+	$matri = htmlspecialchars($_POST['MATRICULE']);
+	if (!empty($matri)) {
+		if (autoriser($matri) == 1) {
+			$notifications = "Le compte de l'utilisateur est maintenant autorisé";
+			$class = "alert-info";
+		}
+	} else {
+		$notifications = "Veuillez saisir un matricule";
+		$class = "alert-warning";
+	}
 }
 // FIN CODE COMPTE
 
@@ -49,11 +51,11 @@ if (isset($_POST['submail'])) {
 	if (empty($to) || empty($sujet) || empty($texte)) {
 		$notifications = "Veuillez remplir tous les champs.";
 		$class = "alert-warning";
-	}else{
-		if (envoyerMail($to,$sujet,$texte) == 0) {
+	} else {
+		if (envoyerMail($to, $sujet, $texte) == 0) {
 			$notifications = "Email envoyé.";
 			$class = "alert-info";
-		}else{
+		} else {
 			$notifications = "Désolé, ce message ne peut être envoyé. Veuillez vérifier votre adresse.";
 			$class = "alert-warning";
 		}
@@ -63,13 +65,14 @@ if (isset($_POST['submail'])) {
 
 <?php
 // SELECTION DE LA LISTE DE COURIER EN ATTENTE POUR ENVOYER UN EMAIL
-  global $conx;
+global $conx;
 
-  // SELECTIONNER LES VCOURIERS
-  $req = $conx->query("SELECT * FROM utilisateurs WHERE utilisateurs.`COURIER` = 1");
-  $tab = array();
-
-  while ($row = $req->fetchObject()) {
-    $tab[] = $row;
-  }
+// SELECTIONNER LES VCOURIERS
+$req = $conx->query("SELECT * FROM utilisateurs WHERE utilisateurs.`COURIER` = 1");
+$tab = array();
+if ($req) {
+	while ($row = $req->fetchObject()) {
+		$tab[] = $row;
+	}
+}
 ?>

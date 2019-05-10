@@ -4,10 +4,10 @@
     // SELECTIONNER LES PDF
     $req = $conx->query("SELECT * FROM documentations WHERE documentations.`FORMAT` = 'video'");
     $tab = array();
-
-    while ($row = $req->fetchObject()) {
+if($req)
+    {while ($row = $req->fetchObject()) {
       $tab[] = $row;
-    }
+    }}
 ?>
           
 <?php

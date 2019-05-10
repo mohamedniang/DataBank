@@ -17,11 +17,13 @@
     <ul>
         <li><a href="index.php?page=home">Home</a></li>
         <li>
-            <a href="#">Document <i class="fa fa-sort-down"></i></a>
+            <a>Document <i class="fa fa-sort-down"></i></a>
             <ul>
                 <li><a href="index.php?page=projets&home=Projets">Projets</a>
                     <ul>
-                        <li class=""><a href="index.php?page=gestionProjets&home=Document / Gestion de projets">Gestion de projets</a></li>
+                        <li class="">
+                            <a href="index.php?page=gestionProjets&home=Document / Gestion de projets">Gestion de projets</a>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="index.php?page=videos&home=Vidéos">Vidéos</a>
@@ -37,7 +39,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">Options <i class="fas fa-sort-down"></i></a>
+            <a>Options <i class="fas fa-sort-down"></i></a>
             <ul>
                 <?php if (isAdmin() == 1) { ?>
                     <li>
@@ -54,38 +56,38 @@
         </li>
 
         <li>
-            <a href="#">Courses <i class="fas fa-sort-down"></i></a>
+            <a>Courses <i class="fas fa-sort-down"></i></a>
             <ul>
                 <li>
-                    <a href="#">Licence I <i class="fa fa-sort-down"></i></a>
+                    <a>Licence I <i class="fa fa-sort-down"></i></a>
                     <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L1 glar&filiere=11">Glar</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L1 geer&filiere=12">Geer</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L1 télécom&filiere=13">Telecom</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L1 gestion&filiere=14">Gestion</a></li>
+                            <li><a href="index.php?page=cours_class_glar&home=Cours.Licence I.Génie Logiciel et Administration réseau&filiere=11">Glar</a></li>
+                            <li><a href="index.php?page=cours_class_geer&home=Cours.Licence I.Génie Electrique et Energie Renouvelable&filiere=12">Geer</a></li>
+                            <li><a href="index.php?page=cours_class_telecom&home=Cours.Licence I.Réseau Télécommunication&filiere=13">Telecom</a></li>
+                            <li><a href="index.php?page=cours_class_gestion&home=Cours.Licence I.Géstion&filiere=14">Gestion</a></li>
                         </ul>
                     <?php } ?>
                 </li>
                 <li>
-                    <a href="#">Licence II <i class="fas fa-sort-down"></i></a>
-                    <?php if (isAdmin() == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
+                    <a>Licence II <i class="fas fa-sort-down"></i></a>
+                    <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L2 glar&filiere=21">Glar</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L2 geer&filiere=22">Geer</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L2 télécom&filiere=23">Telecom</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L2 gestion&filiere=24">Gestion</a></li>
+                            <li><a href="index.php?page=cours_class_glar&home=Cours.Licence II.Génie Logiciel et Administration réseau&filiere=21">Glar</a></li>
+                            <li><a href="index.php?page=cours_class_geer&home=Cours.Licence II.Génie Electrique et Energie Renouvelable&filiere=22">Geer</a></li>
+                            <li><a href="index.php?page=cours_class_telecom&home=Cours.Licence II.Réseau Télécommunication&filiere=23">Telecom</a></li>
+                            <li><a href="index.php?page=cours_class_gestion&home=Cours.Licence II.Géstion&filiere=24">Gestion</a></li>
                         </ul>
                     <?php } ?>
                 </li>
                 <li>
-                    <a href="#">Licence III <i class="fa fa-sort-down"></i></a>
-                    <?php if (isAdmin() == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
+                    <a>Licence III <i class="fa fa-sort-down"></i></a>
+                    <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L3 glar&filiere=31">Glar</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L3 geer&filiere=32">Geer</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L3 télécom&filiere=33">Telecom</a></li>
-                            <li><a href="index.php?page=cours_class&home=Cours de classes L3 gestion&filiere=34">Gestion</a></li>
+                            <li><a href="index.php?page=cours_class_glar&home=Cours.Licence III.Génie Logiciel et Administration réseau&filiere=31">Glar</a></li>
+                            <li><a href="index.php?page=cours_class_geer&home=Cours.Licence III.Génie Electrique et Energie Renouvelable&filiere=32">Geer</a></li>
+                            <li><a href="index.php?page=cours_class_telecom&home=Cours.Licence III.Réseau Télécommunication&filiere=33">Telecom</a></li>
+                            <li><a href="index.php?page=cours_class_gestion&home=Cours.Licence III.Géstion&filiere=34">Gestion</a></li>
                         </ul>
                     <?php } ?>
                 </li>
@@ -93,12 +95,13 @@
         </li>
         <li><a href="index.php?page=soutenance">Soutenance</a></li>
         <!-- <li><a href="#">About Us</a></li> -->
-
-        <span class="ctn-search">
-            <form method="post" action="index.php?page=recherche" class="search-frm">
-                <input type="search" name="RECHERCHE" class="form-control" id="RECHERCHE" placeholder="Sujet de recherche..." />
-            </form>
-        </span>
+        <li>
+            <span class="ctn-search">
+                <form method="post" action="index.php?page=recherche" class="search-frm">
+                    <input type="search" name="RECHERCHE" class="form-control" id="RECHERCHE" placeholder="Sujet de recherche..." />
+                </form>
+            </span>
+        </li>
 
 
         <?php if (isset($_SESSION['databank'])) { ?>
@@ -113,7 +116,6 @@
                 </ul>
             </li>
         <?php } ?>
-
     </ul>
 </nav>
 <!-- 

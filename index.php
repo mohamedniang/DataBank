@@ -12,7 +12,7 @@ require 'control/controls.php';
 <html lang="fr">
 
 <head>
-    <!--        META ET MOT CLES-->
+    <!--        META ET MOT CLES        -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,27 +20,29 @@ require 'control/controls.php';
     <meta name="keywords" content="ESTM, DATA, BANK, donnée, banque, étudiant, école, dakar, Sénégal, yembi, aimé, louis, yembi yembi, hadi touré, mamour">
     <meta name="author" content="YEMBI YEMBI Louis Aimé, Hadi TOURE, et MAMOUR">
 
-    <!--        LE TITRE DU SITRE-->
+    <!--        LE TITRE DU SITRE       -->
     <title>DATABANK-ESTM</title>
 
-    <!--        FICHIERS CSS POUR LE DESIGN-->
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <!--        FICHIERS CSS POUR LE DESIGN         -->
+    <!-- <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" /> -->
+
 
     <!--        L'ICON DU SITE-->
-    <link rel="icon" href="images/CSESTM.jpg">
+    <!-- <link rel="icon" href="images/CSESTM.jpg"> -->
     <!-- <link rel="icon" href="images/icon.png"> -->
 
     <!-- Custom styles for this template -->
-    <link href="bootstrap-3.3.2/docs/examples/carousel/carousel.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.3.2/docs/examples/carousel/carousel.css" rel="stylesheet"> -->
 
     <!--        FIXER LA BAR DE NAVIGATION-->
-    <link href="bootstrap-3.3.2/docs/examples/navbar-fixed-top/navbar-fixed-top.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.3.2/docs/examples/navbar-fixed-top/navbar-fixed-top.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -75,8 +77,8 @@ require 'control/controls.php';
 
 
 <?php
-require 'pages/homes/modifiDoc.php';
-require 'control/modales.php';
+// require 'pages/homes/modifiDoc.php';
+// require 'control/modales.php';
 ?>
 
 </html>
@@ -84,10 +86,10 @@ require 'control/modales.php';
 <script src="js/jquery.js"></script>
 <script src="js/jsToFenetre.js"></script>
 <script src="js/home.func.js"></script>
-<script src="js/galerie.func.js"></script>
+<!-- <script src="js/galerie.func.js"></script> -->
 <script src="bootstrap-3.3.2/dist/js/bootstrap.js"></script>
 <!--<script src="bootstrap-3.3.2/dist/js/bootstrap.min.js"></script>-->
-<script src="bootstrap-3.3.2/docs/assets/js/ie-emulation-modes-warnixng.js"></script>
+<!-- <script src="bootstrap-3.3.2/docs/assets/js/ie-emulation-modes-warnixng.js"></script> -->
 
 
 <!-- JavaScript Includes -->

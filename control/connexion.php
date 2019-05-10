@@ -1,7 +1,7 @@
 <?php
 		
 	$host = 'localhost';
-	$dbname = 'databank';
+	$dbname = 'meddb';
 	$dbuser = 'root';
 	$dbpwd = '';
 

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	// PARTAGE DE NOUVEAU SUJETS DE DISCUSSION
 	$('#submit').click(function(){
@@ -46,4 +46,4 @@ $(document).ready(function(){
 	}
 	setInterval(getForum,5000);
 });
-
+*/
