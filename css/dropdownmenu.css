@@ -1,0 +1,137 @@
+ul {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 31, 31);
+    list-style-type: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 19px;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+
+ul li a:hover {
+    background-color: rgb(75, 73, 73);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav>ul>li>a:hover {
+    background-color: rgb(75, 73, 73);
+    /* border-bottom: 3px solid #3992a0; */
+}
+
+ul ul {
+    position: absolute;
+    /* min-width: 250px; */
+    background-color: rgb(102, 102, 102);
+    display: none;
+    z-index: 1;
+}
+
+ul ul li {
+    display: block;
+    margin: 0;
+}
+
+ul li i {
+    float: right;
+    padding-left: 15px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+ul>li>ul>li:nth-child(1)>ul {
+    position: absolute;
+    /* left: 250px;
+    top: 0px; 
+    min-width: 250px;*/
+    background-color: rgb(102, 102, 102);
+    display: none;
+    z-index: 1;
+}
+
+ul>li>ul>li:nth-child(2)>ul {
+    position: absolute;
+    /* left: 250px;
+    top: 52px; 
+    min-width: 250px;*/
+    background-color: rgb(102, 102, 102);
+    display: none;
+    z-index: 1;
+}
+
+ul>li>ul>li:nth-child(3)>ul {
+    position: absolute;
+    /* left: 250px;
+    top: 104px; 
+    min-width: 250px;*/
+    background-color: rgb(102, 102, 102);
+    display: none;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    ul li:hover ul {
+        display: block;
+    }
+    ul>li>ul>li:nth-child(1):hover>ul {
+        display: block;
+        z-index: 1;
+    }
+    ul>li>ul>li:nth-child(2):hover>ul {
+        display: block;
+        z-index: 1;
+    }
+    ul>li>ul>li:nth-child(3):hover>ul {
+        display: block;
+        z-index: 1;
+    }
+}
+
+.bars {
+    background-color: rgb(32, 32, 32);
+    color: #ffffff;
+    font-size: 24px;
+    padding: 0.6em;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .bars {
+        display: block;
+    }
+    ul {
+        display: none;
+        position: static;
+        background-color: rgb(32, 31, 31);
+    }
+    ul li {
+        display: block;
+    }
+    ul ul {
+        position: static;
+        background-color: rgb(48, 47, 47);
+    }
+    /* test */
+    /* ul>li>ul>li:nth-child(1):hover>ul {
+        display: none;
+    }
+    ul>li>ul>li:nth-child(2):hover>ul {
+        display: none;
+    }
+    ul>li>ul>li:nth-child(3):hover>ul {
+        display: none;
+    } */
+}

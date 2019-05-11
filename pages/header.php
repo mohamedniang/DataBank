@@ -13,10 +13,13 @@
 </head>
 
 <body> -->
-<nav class="navbar navbar-default" id="hdb">
+<nav class="navbar" id="nav">
+    <div class="bars">
+    <i class="fas fa-bars"></i>
+    </div>
     <ul>
         <li><a href="index.php?page=home">Home</a></li>
-        <li>
+        <li class="navItem">
             <a>Document <i class="fa fa-sort-down"></i></a>
             <ul>
                 <li><a href="index.php?page=projets&home=Projets">Projets</a>
@@ -38,7 +41,7 @@
                 </li>
             </ul>
         </li>
-        <li>
+        <li class="navItem">
             <a>Options <i class="fas fa-sort-down"></i></a>
             <ul>
                 <?php if (isAdmin() == 1) { ?>
@@ -55,10 +58,10 @@
             </ul>
         </li>
 
-        <li>
+        <li class="navItem">
             <a>Courses <i class="fas fa-sort-down"></i></a>
             <ul>
-                <li>
+                <li class="navSubItem">
                     <a>Licence I <i class="fa fa-sort-down"></i></a>
                     <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>
@@ -69,7 +72,7 @@
                         </ul>
                     <?php } ?>
                 </li>
-                <li>
+                <li class="navSubItem">
                     <a>Licence II <i class="fas fa-sort-down"></i></a>
                     <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>
@@ -80,7 +83,7 @@
                         </ul>
                     <?php } ?>
                 </li>
-                <li>
+                <li class="navSubItem">
                     <a>Licence III <i class="fa fa-sort-down"></i></a>
                     <?php if (isAdmin() == 1 || asFiliereL1($_SESSION['FILIERE']) == 1 || asFiliereL2($_SESSION['FILIERE']) == 1 || asFiliereL3($_SESSION['FILIERE']) == 1) { ?>
                         <ul>

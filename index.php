@@ -24,14 +24,14 @@ require 'control/controls.php';
     <title>DATABANK-ESTM</title>
 
     <!--        FICHIERS CSS POUR LE DESIGN         -->
-    <!-- <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" />
+    <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/dropdownmenu.css" /> 
 
 
     <!--        L'ICON DU SITE-->
@@ -47,13 +47,13 @@ require 'control/controls.php';
 
 <body>
     <!-- HEADER -->
-    <header class='pagehead'>
+    <header class=''>
         <?php
         require "pages/header.php";
 
         // var_dump($_GET['page']);
         if ($page != "home") { } else {
-            require "pages/slider.html";
+            // require "pages/slider.html";
         }
         ?>
     </header>
@@ -98,6 +98,7 @@ require 'control/controls.php';
 <script src="bootstrap-3.3.2/js/modal.js"></script>
 <script src="bootstrap-3.3.2/js/tooltip.js"></script>
 <script src="bootstrap-3.3.2/js/popover.js"></script>
+<script src="js/dropdownmenu.js"></script>
 
 <!-- JavaScript Test -->
 <script>
