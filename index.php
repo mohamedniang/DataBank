@@ -27,11 +27,11 @@ require 'control/controls.php';
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" /> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap-theme.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/dropdownmenu.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
 
     <!--        L'ICON DU SITE-->
@@ -47,7 +47,7 @@ require 'control/controls.php';
 
 <body>
     <!-- HEADER -->
-    <header class=''>
+    <header>
         <?php
         require "pages/header.php";
 
@@ -59,7 +59,7 @@ require 'control/controls.php';
     </header>
 
     <!-- BODY -->
-    <div class='pagebody bs-docs-section container'>
+    <div>
         <!--            ARBORESCENCE DES PAGES DE NAVIGATION -->
         <!-- MENU -->
         <div class='pagemenu' style="position: fixed;">
@@ -70,7 +70,7 @@ require 'control/controls.php';
     </div>
 
     <!-- FOOTER -->
-    <div class='archipages'>
+    <div>
         <?php require "pages/footer.php"; ?>
     </div>
 </body>
@@ -88,7 +88,7 @@ require 'control/controls.php';
 <script src="js/home.func.js"></script>
 <!-- <script src="js/galerie.func.js"></script> -->
 <script src="bootstrap-3.3.2/dist/js/bootstrap.js"></script>
-<!--<script src="bootstrap-3.3.2/dist/js/bootstrap.min.js"></script>-->
+<script src="bootstrap-3.3.2/dist/js/bootstrap.min.js"></script>
 <!-- <script src="bootstrap-3.3.2/docs/assets/js/ie-emulation-modes-warnixng.js"></script> -->
 
 

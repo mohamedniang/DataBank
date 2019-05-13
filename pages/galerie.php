@@ -10,20 +10,23 @@ if ($req) {
   }
 }
 ?>
-<div class="bs-docs-section">
-  <h1 id="thumbnails" class="page-header titre">Galérie E.S.T.M.</h1>
+<div class="bodySection">
+  <h1 class="titre">
+    <i class="far fa-images"></i>
+    <span class="desc">Galérie E.S.T.M.</span>
+  </h1>
 
-  <div class="col">
+  <!-- <div class="galerieImage"> -->
+    <div class="photoList">
 
-    <div class="col-xs-12 col-sm-12">
-      <div class="row">
-
-        <?php
-        foreach ($info as $galerie) {
-          ?>
-          <div class="col-xs-6 col-lg-3">
-            <img src="donnees/images/<?= $galerie->CONTENUDOC ?>" title="<?= $galerie->TITRE ?>" alt="<?= $galerie->TITRE ?> | <?= $galerie->DATEDOC ?> | <?= $galerie->AUTEUR ?> <a href='donnees/images/<?= $galerie->CONTENUDOC ?>' download='<?= $galerie->CONTENUDOC ?>'>Téléchager</a>" id="myImg" width="100%" height="200px" onclick="myModal(this)" />
-            <p style="margin-top:;"><?= $galerie->AUTEUR ?> | <?= $galerie->DATEDOC ?></p>
-          </div>
-        <?php }
-      ?>
+      <?php
+      foreach ($info as $galerie) {
+        ?>
+        <div class="photoElt">
+          <img src="donnees/images/<?= $galerie->CONTENUDOC ?>" title="<?= $galerie->TITRE ?>" alt="<?= $galerie->TITRE ?> | <?= $galerie->DATEDOC ?> | <?= $galerie->AUTEUR ?> <a href='donnees/images/<?= $galerie->CONTENUDOC ?>' download='<?= $galerie->CONTENUDOC ?>'>Téléchager</a>" id="myImg" width="100%" height="200px" onclick="myModal(this)" />
+          <span class="photoDescription"><?= $galerie->AUTEUR ?> | <?= $galerie->DATEDOC ?></span>
+        </div>
+      <?php } ?>
+    </div>
+  <!-- </div> -->
+</div>

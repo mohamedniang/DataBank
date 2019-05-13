@@ -55,7 +55,7 @@
 	// FONCTION DE RECHERCHE ET D'AFFICHAGE DES PAGES DE CONTROL FENETRE MODALE
 	$model = scandir('fenetres/');
 	if (in_array($page.'.fene.php', $model)) {
-		require 'fenetres/'.$page.'.fene.php';
+		// require 'fenetres/'.$page.'.fene.php';
 	}
 
 ?>

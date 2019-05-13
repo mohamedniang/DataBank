@@ -9,7 +9,7 @@
 }
 
 html {
-    font-family: 'Arial';
+    font-family: Montserrat-Light, Arial, Helvetica, sans-serif;
     /* font-weight: thin; */
     /* font-size: 1.2em; */
 }
@@ -18,7 +18,12 @@ body {
     margin: 0;
     padding: 0;
     /* background-color: white; */
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
 }
+
+
+/* .home-body {} */
 
 .newC {
     margin-top: -10px;
@@ -94,4 +99,245 @@ a:hover {
 .icon-right {
     float: right;
     line-height: 0.2;
+}
+
+footer {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "left middle right";
+    background-color: #3992a0;
+    border-top: #77c7d3 2px solid;
+    align-items: center;
+}
+
+footer {
+    font-size: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.filActu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: #3992a0 solid 2px;
+    min-width: 50px;
+    color: #3992a0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #3992a0;
+    color: #ffffff;
+}
+
+.descrip {
+    padding: 5px;
+    margin: 10px;
+}
+
+.listGroup {
+    display: grid;
+    grid-auto-rows: 50px;
+    align-items: stretch;
+    color: black;
+}
+
+.listGroup .listItem {
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: end;
+    border-radius: 15px;
+}
+
+.listGroup .listItem:nth-child(2n+1) {
+    background-color: #3992a079;
+}
+
+.listGroup .listItem:nth-child(2n) {
+    background-color: #77c7d37c;
+}
+
+.listGroup .listItem .icon-right {
+    align-self: center;
+}
+
+.listGroup .listItem a {
+    text-decoration: none;
+}
+
+.bodySection {
+    padding: 20px;
+    min-height: 500px;
+    /* width: 100%; */
+}
+
+.videoList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.videoElt {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    /* grid-gap: 5px; */
+    justify-items: center;
+    border: #3992a0 1px solid;
+}
+
+
+/* .videoList .videoElt .caption {} */
+
+.photoList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    place-items: center;
+}
+
+.photoElt {
+    border: #3992a0 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.photoElt img {
+    max-width: 300px;
+    /* padding: 5px; */
+}
+
+.photoDescription {
+    margin: 5px;
+    padding: 5px;
+    background-color: #3992a0;
+}
+
+.courList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.courElt {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-items: stretch;
+}
+
+.courElt .photoElt img {
+    align-self: center;
+}
+
+.courElt .caption {
+    background-color: #3992a0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.courElt .caption h3,
+.courElt .caption h4,
+.videoElt .caption h3,
+.videoElt .caption h4 {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+}
+
+.courElt .caption h3 {
+    text-transform: uppercase;
+}
+
+.courElt .caption div,
+.videoElt .caption div {
+    display: grid;
+    /* justify-items: center;
+    align-items: center; 
+    justify-content: end;
+    align-content: flex-end*/
+    grid-template-columns: 1fr 1fr;
+}
+
+.courElt .caption div a {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .filActu {
+        grid-template-columns: 1fr;
+    }
+    .titre {
+        text-align: center;
+        /* width: 300px; */
+        font-size: 30px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .titre i {
+        justify-self: center;
+    }
+    .titre span {
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        line-height: 30px;
+        text-align: center;
+    }
+    .demiTitre {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        line-height: 20px;
+        text-align: center;
+    }
+    .sousTitre {
+        font-size: 15px;
+    }
+    .videoList {
+        grid-template-columns: 1fr;
+    }
+    .videoElt {
+        max-width: 300px;
+    }
+    .photoList {
+        grid-template-columns: 1fr;
+    }
+    .photoElt img {
+        max-width: 300px;
+    }
+    .courList {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 350px;
+    }
+    footer {
+        font-size: 60%;
+        padding: 5px;
+        text-align: center;
+    }
 }

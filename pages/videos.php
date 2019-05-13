@@ -11,18 +11,19 @@ if ($req) {
 }
 ?>
 <div class="bs-docs-section container">
-  <h1 id="thumbnails" class="titre">Vidéos E.S.T.M.</h1>
+  <h1 id="thumbnails" class="titre">
+    <i class="fas fa-film"></i>
+    <span class="desc">Vidéos E.S.T.M.</span>
+  </h1>
 
-  <div class="">
-
-    <div class="col-xs-12 col-sm-12">
-      <div class="row">
+  <div>
+      <div class="videoList">
 
         <?php
         foreach ($info as $video) {
           ?>
 
-          <div class="col-xs-3 col-lg-6">
+          <div class="videoElt">
             <h2 class="sousTitre"><?= $video->TITRE ?></h2>
             <a href="#" class="thumbnail">
               <video src="donnees/videos/<?= $video->CONTENUDOC ?>" width="100%" height="100%" controls></video>
@@ -33,6 +34,5 @@ if ($req) {
         <?php }
       ?>
       </div>
-    </div>
   </div>
 </div>

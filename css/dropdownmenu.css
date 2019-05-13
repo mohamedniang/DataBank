@@ -1,4 +1,4 @@
-ul {
+#nav ul {
     margin: 0;
     padding: 0;
     background-color: rgb(32, 31, 31);
@@ -7,20 +7,20 @@ ul {
     padding: 0;
 }
 
-ul li {
+#nav ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
 
-ul li a {
+#nav ul li a {
     text-decoration: none;
     padding: 19px;
     display: block;
     color: rgb(255, 255, 255);
 }
 
-ul li a:hover {
+#nav ul li a:hover {
     background-color: rgb(75, 73, 73);
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -31,7 +31,7 @@ nav>ul>li>a:hover {
     /* border-bottom: 3px solid #3992a0; */
 }
 
-ul ul {
+#nav ul ul {
     position: absolute;
     /* min-width: 250px; */
     background-color: rgb(102, 102, 102);
@@ -39,12 +39,12 @@ ul ul {
     z-index: 1;
 }
 
-ul ul li {
+#nav ul ul li {
     display: block;
     margin: 0;
 }
 
-ul li i {
+#nav ul li i {
     float: right;
     padding-left: 15px;
     color: rgb(255, 255, 255);
@@ -81,22 +81,23 @@ ul>li>ul>li:nth-child(3)>ul {
     z-index: 1;
 }
 
-@media (min-width: 768px) {
-    ul li:hover ul {
-        display: block;
-    }
-    ul>li>ul>li:nth-child(1):hover>ul {
-        display: block;
-        z-index: 1;
-    }
-    ul>li>ul>li:nth-child(2):hover>ul {
-        display: block;
-        z-index: 1;
-    }
-    ul>li>ul>li:nth-child(3):hover>ul {
-        display: block;
-        z-index: 1;
-    }
+ul li:hover ul {
+    display: block;
+}
+
+ul>li>ul>li:nth-child(1):hover>ul {
+    display: block;
+    z-index: 1;
+}
+
+ul>li>ul>li:nth-child(2):hover>ul {
+    display: block;
+    z-index: 1;
+}
+
+ul>li>ul>li:nth-child(3):hover>ul {
+    display: block;
+    z-index: 1;
 }
 
 .bars {
@@ -112,15 +113,15 @@ ul>li>ul>li:nth-child(3)>ul {
     .bars {
         display: block;
     }
-    ul {
+    #nav ul {
         display: none;
         position: static;
         background-color: rgb(32, 31, 31);
     }
-    ul li {
+    #nav ul li {
         display: block;
     }
-    ul ul {
+    #nav ul ul {
         position: static;
         background-color: rgb(48, 47, 47);
     }
