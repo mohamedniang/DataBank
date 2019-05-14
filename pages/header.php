@@ -15,14 +15,15 @@
 <body> -->
 <nav class="navbar" id="nav">
     <div class="bars">
-    <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i>
     </div>
     <ul>
         <li><a href="index.php?page=home">Home</a></li>
         <li class="navItem">
             <a>Document <i class="fa fa-sort-down"></i></a>
             <ul>
-                <li class="navSubItem"><a href="index.php?page=projets&home=Projets">Projets</a>
+                <li class="navSubItem">
+                    <a href="index.php?page=projets&home=Projets">Projets</a>
                     <ul>
                         <li class="">
                             <a href="index.php?page=gestionProjets&home=Document / Gestion de projets">Gestion de projets</a>
@@ -98,19 +99,19 @@
         </li>
         <li><a href="index.php?page=soutenance">Soutenance</a></li>
         <!-- <li><a href="#">About Us</a></li> -->
-        <?php if(false) { ?>
-        <li>
-            <span class="ctn-search">
-                <form method="post" action="index.php?page=recherche" class="search-frm">
-                    <input type="search" name="RECHERCHE" class="form-control" id="RECHERCHE" placeholder="Sujet de recherche..." />
-                </form>
-            </span>
-        </li>
+        <?php if (false) { ?>
+            <li>
+                <span class="ctn-search">
+                    <form method="post" action="index.php?page=recherche" class="search-frm">
+                        <input type="search" name="RECHERCHE" class="form-control" id="RECHERCHE" placeholder="Sujet de recherche..." />
+                    </form>
+                </span>
+            </li>
         <?php } ?>
 
         <?php if (isset($_SESSION['databank'])) { ?>
             <!-- <li>  </li> -->
-            <li class="dropdown" style="float: right; right: 70px">
+            <li class="navItem" style="float: right; right: 70px">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $_SESSION['NOMS'] ?> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <!-- <li><a href="index.php?page=profile">Profile</a></li> -->

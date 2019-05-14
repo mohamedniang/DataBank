@@ -26,78 +26,28 @@
     text-decoration: none;
 }
 
-nav>ul>li>a:hover {
-    background-color: rgb(75, 73, 73);
-    /* border-bottom: 3px solid #3992a0; */
-}
-
-#nav ul ul {
-    position: absolute;
-    /* min-width: 250px; */
-    background-color: rgb(102, 102, 102);
+.navItem ul {
     display: none;
-    z-index: 1;
 }
 
-#nav ul ul li {
-    display: block;
-    margin: 0;
-}
-
-#nav ul li i {
-    float: right;
-    padding-left: 15px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-}
-
-ul>li>ul>li:nth-child(1)>ul {
+.navItem:hover>ul {
     position: absolute;
-    /* left: 250px;
-    top: 0px; 
-    min-width: 250px;*/
-    background-color: rgb(102, 102, 102);
-    display: none;
+    display: grid;
     z-index: 1;
+    grid-auto-rows: 1fr;
 }
 
-ul>li>ul>li:nth-child(2)>ul {
+.navSubItem ul {
+    display: none;
+}
+
+.navSubItem:hover ul {
     position: absolute;
-    /* left: 250px;
-    top: 52px; 
-    min-width: 250px;*/
-    background-color: rgb(102, 102, 102);
-    display: none;
+    left: 150px;
+    top: 11px;
+    display: grid;
     z-index: 1;
-}
-
-ul>li>ul>li:nth-child(3)>ul {
-    position: absolute;
-    /* left: 250px;
-    top: 104px; 
-    min-width: 250px;*/
-    background-color: rgb(102, 102, 102);
-    display: none;
-    z-index: 1;
-}
-
-ul li:hover ul {
-    display: block;
-}
-
-ul>li>ul>li:nth-child(1):hover>ul {
-    display: block;
-    z-index: 1;
-}
-
-ul>li>ul>li:nth-child(2):hover>ul {
-    display: block;
-    z-index: 1;
-}
-
-ul>li>ul>li:nth-child(3):hover>ul {
-    display: block;
-    z-index: 1;
+    grid-auto-rows: 1fr;
 }
 
 .bars {
@@ -107,6 +57,18 @@ ul>li>ul>li:nth-child(3):hover>ul {
     padding: 0.6em;
     cursor: pointer;
     display: none;
+}
+
+.navItem a,
+.navSubItem a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navItem,
+.navSubItem {
+    width: 150px;
 }
 
 @media(max-width: 768px) {
@@ -124,6 +86,10 @@ ul>li>ul>li:nth-child(3):hover>ul {
     #nav ul ul {
         position: static;
         background-color: rgb(48, 47, 47);
+    }
+    .navItem,
+    .navSubItem {
+        width: 370px;
     }
     /* test */
     /* ul>li>ul>li:nth-child(1):hover>ul {
