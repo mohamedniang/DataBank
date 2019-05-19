@@ -4,7 +4,7 @@
 		global $conx;
 		$e = array('EMAIL' => $email);
 
-		$sql = 'SELECT EMAIL FROM utilisateur WHERE EMAIL = :EMAIL';
+		$sql = 'SELECT EMAIL FROM utilisateurs WHERE EMAIL = :EMAIL';
 		$req = $conx->prepare($sql);
 		$req->execute($e);
 
@@ -14,20 +14,21 @@
 	}
 
 	// INSERTION DU COURIER
-	function ajoutUser($matri,$pseudo, $email,$password){
+	function ajoutUser($matri,$pseudo, $email, $password, $filiere){
 		global $conx;
 
 		$e = 0;
 		$t = 0;
-		$c = 1;
+		$c = 0;
 		$r = array('MATRICULE' => $matri,
-					'PSEUDO' => $pseudo,
+					'NOMS' => $pseudo,
 					'EMAIL' => $email,
 					'MOTDEPASSE' => $password,
+					'FILIERE' => $filiere,
 					'ETAT' => $e,
 					'TYPE' => $t,
 					'COURIER' => $c);
-		$sql = 'INSERT INTO utilisateur(MATRICULE,PSEUDO,EMAIL,MOTDEPASSE,ETAT,TYPE,COURIER) VALUES(:MATRICULE,:PSEUDO, :EMAIL, :MOTDEPASSE,:ETAT,:TYPE, :COURIER)';
+		$sql = 'INSERT INTO utilisateurs(MATRICULE,NOMS,EMAIL,MOTDEPASSE,FILIERE,ETAT,TYPE,COURIER) VALUES(:MATRICULE,:NOMS, :EMAIL, :MOTDEPASSE,:FILIERE,:ETAT,:TYPE,:COURIER)';
 		$req = $conx->prepare($sql);
 		$result = $req->execute($r);
 

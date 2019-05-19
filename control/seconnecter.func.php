@@ -3,7 +3,7 @@ function user_exist($email, $password){
    global $conx;
    $u = array('EMAIL' => $email, 'MOTDEPASSE' => $password);
 
-   $sql = "SELECT EMAIL,MOTDEPASSE FROM utilisateurs WHERE (EMAIL = :EMAIL AND MOTDEPASSE = :MOTDEPASSE) AND (ETAT = 0 AND COURIER != 1)";
+   $sql = "SELECT EMAIL,MOTDEPASSE FROM utilisateurs WHERE (EMAIL = :EMAIL AND MOTDEPASSE = :MOTDEPASSE)";
    $req = $conx->prepare($sql);
    $req->execute($u);
    $exist = $req->rowCount($sql);

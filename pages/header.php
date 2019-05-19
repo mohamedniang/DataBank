@@ -117,7 +117,7 @@
                     <!-- <li><a href="index.php?page=profile">Profile</a></li> -->
                     <!-- <li><a href="#">Another action</a></li> -->
                     <li class="dropdown-header"><?= $_SESSION['databank'] ?></li>
-                    <li><a href="pages/sedeconnecter.php">Déconnexion</a></li>
+                    <li><a href="monportailweb/sedeconnecter.php">Déconnexion</a></li>
                 </ul>
             </li>
         <?php } ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['databank'])) {
-    header('location:seconnecter.php');
+    header('location:monportailweb/seconnecter.php');
 }
 
 require 'control/controls.php';

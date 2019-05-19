@@ -31,7 +31,7 @@ body {
 }
 
 .titre {
-    color: #3992a0;
+    color: #5b8bd3;
     font-size: 60px;
     line-height: 60px;
     font-weight: 900;
@@ -51,7 +51,7 @@ body {
 }
 
 .sousTitre {
-    color: #3992a0;
+    color: #5b8bd3;
     font-size: 25px;
     /* line-height:60px; */
     font-weight: 400;
@@ -68,7 +68,7 @@ body {
     font-family: 'Montserrat-Black';
     padding: 10px;
     margin: 10px 0;
-    background-color: #3992a0;
+    background-color: #5b8bd3;
     border-radius: 50px;
 }
 
@@ -106,7 +106,7 @@ footer {
     grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "left middle right";
-    background-color: #3992a0;
+    background-color: #5b8bd3;
     border-top: #77c7d3 2px solid;
     align-items: center;
 }
@@ -143,15 +143,21 @@ footer .right {
     margin: 5px;
     background-color: #ffffff;
     border-radius: 25px;
-    border: #3992a0 solid 2px;
+    border: #5b8bd3 solid 2px;
     min-width: 50px;
-    color: #3992a0;
+    /* min-height: 30px; */
+    color: #5b8bd3;
     transition: 0.3s ease-in-out;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #3992a0;
+    background-color: #5b8bd3;
     color: #ffffff;
+}
+
+.btn-add {
+    font-size: 0.7em;
 }
 
 .descrip {
@@ -176,7 +182,7 @@ footer .right {
 }
 
 .listGroup .listItem:nth-child(2n+1) {
-    background-color: #3992a079;
+    background-color: #5b8bd379;
 }
 
 .listGroup .listItem:nth-child(2n) {
@@ -208,7 +214,7 @@ footer .right {
     grid-template-rows: 2fr 1fr;
     /* grid-gap: 5px; */
     justify-items: center;
-    border: #3992a0 1px solid;
+    border: #5b8bd3 1px solid;
 }
 
 
@@ -222,7 +228,7 @@ footer .right {
 }
 
 .photoElt {
-    border: #3992a0 1px solid;
+    border: #5b8bd3 1px solid;
     display: flex;
     flex-direction: column;
 }
@@ -235,7 +241,7 @@ footer .right {
 .photoDescription {
     margin: 5px;
     padding: 5px;
-    background-color: #3992a0;
+    background-color: #5b8bd3;
 }
 
 .courList {
@@ -255,7 +261,7 @@ footer .right {
 }
 
 .courElt .caption {
-    background-color: #3992a0;
+    background-color: #5b8bd3;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 }
@@ -285,6 +291,192 @@ footer .right {
 
 .courElt .caption div a {
     text-align: center;
+}
+
+.container-connection {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.presentation {
+    align-self: center;
+    justify-self: center;
+}
+
+.presentation img {
+    width: 500px;
+}
+
+.connection {
+    display: grid;
+    grid-auto-rows: 1fr auto;
+    justify-self: stretch;
+}
+
+.form-connection-head {
+    align-self: center;
+    justify-self: center;
+    font-size: 5em;
+    color: #5b8bd3;
+}
+
+.form-signin form {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    /* padding: 30px; */
+}
+
+.form-signin form input[type="email"],
+.form-signin form input[type="password"] {
+    border: #5b8bd3 1px solid;
+    margin: 5px 0;
+    min-height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+    /* justify-self: stretch; */
+}
+
+.form-signin form div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: stretch;
+}
+
+.form-signin form div.insc p {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+#forms {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.inscriptionContainer {
+    width: 60%;
+    margin: auto;
+}
+
+.form-insc form {
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.form-insc .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-insc .form-group label {
+    grid-column: 1/2;
+}
+
+.form-insc .form-group input {
+    grid-column: 2/4;
+}
+
+.form-insc .form-group label {
+    justify-items: center;
+    font-size: 1.5em;
+    align-self: center;
+}
+
+.form-insc input,
+.form-add input[type="text"],
+.form-add input[type="email"],
+.form-add input[type="password"],
+.form-add input[type="file"],
+.form-add select {
+    border: #5b8bd3 1px solid;
+    margin: 5px 0;
+    min-height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-family: Montserrat-Light;
+    width: 100%;
+}
+
+.form-insc .subBouton {
+    align-items: center;
+}
+
+#send-conx {
+    grid-column: 1/3;
+}
+
+#back-conx {
+    grid-column: 3/4;
+}
+
+.form-insc .filliere {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    align-items: center;
+}
+
+.form-insc .filliere .fill {
+    grid-column: 2/4;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.form-insc .filliere .fill .fill-part {
+    display: flex;
+    align-content: center;
+}
+
+.form-insc .filliere .fill .fill-part span {
+    align-self: center;
+    margin-left: 5px;
+    font-size: 1.5em;
+}
+
+.form-insc .filliere-select div {
+    grid-column: 2/4;
+}
+
+.container-add {
+    width: 65%;
+    margin: 20px auto;
+}
+
+.forms-add {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 30px;
+}
+
+.form-add>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-row-gap: 5px;
+}
+
+.form-add>div *:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.form-add>div *:nth-child(2) {
+    grid-column: 2/4;
+}
+
+.checkbox-add {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.form-add .sousTitre {
+    text-align: center;
+    margin: 10px auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -339,5 +531,36 @@ footer .right {
         font-size: 60%;
         padding: 5px;
         text-align: center;
+    }
+    .container-connection {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+        place-items: center;
+        /* padding: 10px; */
+    }
+    .presentation img {
+        width: 300px;
+    }
+    .connection {
+        padding: 5px;
+    }
+    #forms {
+        font-size: 1.3em;
+    }
+    .inscriptionContainer {
+        width: 100%;
+        /* padding: 5px; */
+    }
+    .form-insc {
+        padding: 5px;
+    }
+    .form-insc .filliere .fill .fill-part span {
+        font-size: 0.9em;
+    }
+    .form-insc .form-group label {
+        font-size: 1.1em;
     }
 }

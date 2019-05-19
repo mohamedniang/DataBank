@@ -1,16 +1,22 @@
-<?php
-		
+<!--        L'ICON DU SITE-->
+<link rel="icon" href="../images/photo.jpg">
+<link href="../bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap-3.3.2/docs/examples/signin/signin.css" rel="stylesheet">
+
+  <?php
+	$err = 	'<div class="alert alert-danger" role="alert" align="center"><strong id="notifications">Attention! </strong>Une erreure est survenue lors de la connexion à la banque de données! Veuillez nous excuser. <a href="mailto:">Club Scientifique ESTM</a>
+        </div>';
+
+    // INITIALISATION DE LA CONNEXION AVEC LA BASE DE DONNEES
 	$host = 'localhost';
 	$dbname = 'databank';
 	$dbuser = 'root';
-	// $dbuser = 'phpmyadmin';
 	$dbpwd = '';
-	// $dbpwd = 'admin';
 
 	try{
 		$conx = new PDO('mysql:host='.$host.'; dbname='.$dbname,$dbuser,$dbpwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 	}catch(PDOexception $e){
-		die("Une erruer est survenue lors de la connexion à la banque de données! Veuillez nous excuser. <a href='mailto:'>Club Scientifique ESTM</a>");
+		die($err);
 	}
 
 
