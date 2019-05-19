@@ -563,4 +563,14 @@ footer .right {
     .form-insc .form-group label {
         font-size: 1.1em;
     }
+    .container-add {
+        width: 100%;
+        margin: 20px auto;
+    }
+    .checkbox-add {
+        align-items: center;
+    }
+    .form-add>div label {
+        font-size: 0.8em;
+    }
 }
