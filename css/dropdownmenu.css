@@ -71,6 +71,14 @@
     width: 150px;
 }
 
+.dropdown-toggle {
+    text-align: center;
+}
+
+.dropdown-menu {
+    color: white;
+}
+
 @media(max-width: 768px) {
     .bars {
         display: block;

@@ -80,8 +80,6 @@ require '../control/ouvrircompte.func.php';
     }
   }
   ?>
-
-
   <div class="inscriptionContainer fontify">
     <h3 id="forms" class="demiTitre">Faites une demande d'ouverture de compte</h3>
     <?php if (!empty($notifications)) {
@@ -105,47 +103,47 @@ require '../control/ouvrircompte.func.php';
         <div class="form-group filliere">
           <label for="STATUS">Niveau </label>
           <div class="fill">
-            <div class="fill-part"><input type="radio" name="NIVFIL" value="L10" onclick="met(this,'L10','L20','L30');"> <span>Licence 1</span></div>
-            <div class="fill-part"><input type="radio" name="NIVFIL" value="L20" onclick="met(this,'L20','L10','L30');"> <span>Licence 2</span></div>
-            <div class="fill-part"><input type="radio" name="NIVFIL" value="L30" onclick="met(this,'L30','L10','L20');"> <span>Licence 3</span></div>
+            <div class="fill-part"><input type="radio" name="NIVFIL" value="L10" onclick="met(this,'L10','L20','L30');"><span>Licence 1</span></div>
+            <div class="fill-part"><input type="radio" name="NIVFIL" value="L20" onclick="met(this,'L20','L10','L30');"><span>Licence 2</span></div>
+            <div class="fill-part"><input type="radio" name="NIVFIL" value="L30" onclick="met(this,'L30','L10','L20');"><span>Licence 3</span></div>
           </div>
+        </div>
+        <div class="form-group filliere-select" id="L10" style="display: none;">
+          <label for="exampleInputPassword1">Filières</label>
+          <div>
+            <select type="text" class="form-control" name="FILIER" id="FILIERE">
+              <option value="">Sélectionner la filière de Licence 1</option>
+              <option value="11">Licence 1 : GLAR</option>
+              <option value="12">Licence 1 : GEER</option>
+              <option value="13">Licence 1 : TELECOM</option>
+              <option value="14">Licence 1 : GESTION</option>
+            </select>
           </div>
-            <div class="form-group filliere-select" id="L10" style="display: none;">
-              <label for="exampleInputPassword1">Filières</label>
-              <div>
-                <select type="text" class="form-control" name="FILIER" id="FILIERE">
-                  <option value="">Sélectionner la filière de Licence 1</option>
-                  <option value="11">Licence 1 : GLAR</option>
-                  <option value="12">Licence 1 : GEER</option>
-                  <option value="13">Licence 1 : TELECOM</option>
-                  <option value="14">Licence 1 : GESTION</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group filliere-select" id="L20" style="display: none;">
-              <label for="exampleInputPassword1">Filières</label>
-              <div>
-                <select type="text" class="form-control" name="FILIERE" id="FILIERE" onclick="">
-                  <option value="">Sélectionner la filière de Licence 2</option>
-                  <option value="21">Licence 2 : GLAR</option>
-                  <option value="22">Licence 2 : GEER</option>
-                  <option value="23">Licence 2 : TELECOM</option>
-                  <option value="24">Licence 2 : GESTION</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group filliere-select" id="L30" style="display: none;">
-              <label for="exampleInputPassword1">Filières</label>
-              <div>
-                <select type="text" class="form-control" name="FILIERES" id="FILIERE">
-                  <option value="">Sélectionner la filière de Licence 3</option>
-                  <option value="31">Licence 3 : GLAR</option>
-                  <option value="32">Licence 3 : GEER</option>
-                  <option value="33">Licence 3 : TELECOM</option>
-                  <option value="34">Licence 3 : GESTION</option>
-                </select>
-              </div>
-            </div>        
+        </div>
+        <div class="form-group filliere-select" id="L20" style="display: none;">
+          <label for="exampleInputPassword1">Filières</label>
+          <div>
+            <select type="text" class="form-control" name="FILIERE" id="FILIERE" onclick="">
+              <option value="">Sélectionner la filière de Licence 2</option>
+              <option value="21">Licence 2 : GLAR</option>
+              <option value="22">Licence 2 : GEER</option>
+              <option value="23">Licence 2 : TELECOM</option>
+              <option value="24">Licence 2 : GESTION</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group filliere-select" id="L30" style="display: none;">
+          <label for="exampleInputPassword1">Filières</label>
+          <div>
+            <select type="text" class="form-control" name="FILIERES" id="FILIERE">
+              <option value="">Sélectionner la filière de Licence 3</option>
+              <option value="31">Licence 3 : GLAR</option>
+              <option value="32">Licence 3 : GEER</option>
+              <option value="33">Licence 3 : TELECOM</option>
+              <option value="34">Licence 3 : GESTION</option>
+            </select>
+          </div>
+        </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email </label>
           <input type="email" name="EMAIL" id="EMAIL" class="form-control" id="exampleInputEmail1" placeholder="Entrez votre email">
@@ -164,7 +162,7 @@ require '../control/ouvrircompte.func.php';
       </form>
     </div><!-- /connexion -->
   </div>
-  <script src="../js/jsToFenetre.js"></script>
 </body>
+<script src="../js/jsToFenetre.js"></script>
 
 </html>

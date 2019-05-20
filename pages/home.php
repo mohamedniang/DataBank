@@ -88,11 +88,11 @@
 
 
         <?php
-        foreach ($docus as $img) {
-          if (($img->FORMAT) == 'img') {
+        foreach ($boxs as $img => $home) {
+          if ($img) {
             ?>
-            <div class="photoElt">
-              <img src="donnees/images/<?= $img->CONTENUDOC ?>" title="<?= $img->TITRE ?>" alt="<?= $img->TITRE ?> | <?= $img->DATEDOC ?> | <?= $img->AUTEUR ?> <a href='donnees/images/<?= $img->CONTENUDOC ?>' download='<?= $img->CONTENUDOC ?>'>Téléchager</a>" id="myImg" width="100%" height="200px" onclick="myModal(this)" />
+            <div class="photoElt home-fill">
+              <a href="index.php?page=cours_class_<?= $img?>&home=<?= $home[0]?>&filiere=<?= $home[1]?>"><img src="images/<?= $img?>Box.png" title="<?= $img ?>" alt="<?= $img ?>" /></a>
               <!-- <span><?= $img->TITRE ?></span> -->
             </div>
           <?php }
@@ -100,7 +100,6 @@
       ?>
 
       </div>
-
 
 
       <div class="bs-docs-section">

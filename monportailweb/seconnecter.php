@@ -37,7 +37,7 @@
         <input type="password" name="MOTDEPASSE" id="MOTDEPASSE" class="form-control" placeholder="Entrez votre mot de passe" required>
       </div>
       <div class="insc">
-        <p>Toujours pas de compte ? <a href="ouvrircompte.php" class="btn">Inscrivez-vous</a></p>
+        <span>Toujours pas de compte ? <a href="ouvrircompte.php" class="btn btn-green">Inscrivez-vous</a></span>
       </div>
       <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" id="send-conx">Se connecter</button>
       </form>

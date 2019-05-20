@@ -111,12 +111,12 @@
 
         <?php if (isset($_SESSION['databank'])) { ?>
             <!-- <li>  </li> -->
-            <li class="navItem" style="float: right; right: 70px">
+            <li class="navItem" style="float: right;">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $_SESSION['NOMS'] ?> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <!-- <li><a href="index.php?page=profile">Profile</a></li> -->
                     <!-- <li><a href="#">Another action</a></li> -->
-                    <li class="dropdown-header"><?= $_SESSION['databank'] ?></li>
+                    <li><?= $_SESSION['databank'] ?></li>
                     <li><a href="monportailweb/sedeconnecter.php">Déconnexion</a></li>
                 </ul>
             </li>

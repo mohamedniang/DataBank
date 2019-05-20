@@ -26,7 +26,12 @@ if ($req) {
     $doc[] = $rows;
   }
 }
-
+$boxs = array(
+  "glar" => array("Cours.Licence I.Génie Logiciel et Administration réseau", "11"),
+  "geer" => array("Cours.Licence I.Génie Electrique et Energie Renouvelable", "12"),
+  "telecom" => array("Cours.Licence I.Réseau Télécommunication", "13"),
+  "gestion" => array("Cours.Licence I.Géstion", "14")
+);
     // SELECTION DE SUJETS DE DISCUSSION
     // $req = $conx->query("SELECT * FROM sujet ORDER BY IDSUJET ASC");
     // $tab = array();

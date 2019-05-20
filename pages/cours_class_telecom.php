@@ -57,20 +57,23 @@ include_once './control/cours_class.func.php';
           <h1 id="thumbnails" class="titreSection">Documentation écrite <i class="icon-right fas fa-sort-down fa-3x"></i></h1>
 
           <div class="bs-example" data-example-id="thumbnails-with-custom-content">
-            <div class="row">
+            <div class="courList">
               <?php
               foreach ($doc as $pdf) {
                 if (($pdf->FORMAT) == 'pdf') {
                   ?>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
+                  <div class="courElt">
+                    <div class="photoElt">
                       <img src="images/ESTM.png" alt="<?= $pdf->TITRE ?>" title="<?= $pdf->TITRE ?>">
-                      <div class="caption">
-                        <h3><?= $pdf->TITRE ?></h3>
+                    </div>
+                    <div class="caption">
+                      <h3><?= $pdf->TITRE ?></h3>
 
-                        <p><?= $pdf->AUTEUR ?> | <?= $pdf->DATEDOC ?></p>
+                      <h4><?= $pdf->AUTEUR ?> | <?= $pdf->DATEDOC ?></h4>
 
-                        <p><a href="index.php?page=lire&home=Projets&data=<?= $pdf->CONTENUDOC ?>" class="btn btn-primary" role="button">Lire</a> <a href="donnees/pdf/<?= $pdf->CONTENUDOC ?>" download="<?= $pdf->CONTENUDOC ?>" class="btn btn-default" role="button">Téléchager</a></p>
+                      <div>
+                        <a href="index.php?page=lire&home=Projets&data=<?= $pdf->CONTENUDOC ?>" class="btn btn-primary" role="button">Lire</a> 
+                        <a href="donnees/pdf/<?= $pdf->CONTENUDOC ?>" download="<?= $pdf->CONTENUDOC ?>" class="btn btn-default" role="button">Téléchager</a>
                       </div>
                     </div>
                   </div>

@@ -25,10 +25,7 @@ require 'control/controls.php';
 
     <!--        FICHIERS CSS POUR LE DESIGN         -->
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2/dist/css/bootstrap-theme.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/galerie_vue.css" /> -->
+    <link href="../bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/dropdownmenu.css" /> 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -54,6 +51,7 @@ require 'control/controls.php';
         // var_dump($_GET['page']);
         if ($page != "home") { } else {
             // require "pages/slider.html";
+            require "pages/banner.html";
         }
         ?>
     </header>
