@@ -111,7 +111,7 @@ require '../control/ouvrircompte.func.php';
         <div class="form-group filliere-select" id="L10" style="display: none;">
           <label for="exampleInputPassword1">Filières</label>
           <div>
-            <select type="text" class="form-control" name="FILIER" id="FILIERE">
+            <select type="text" class="form-control" name="FILIER" id="FILIERE1">
               <option value="">Sélectionner la filière de Licence 1</option>
               <option value="11">Licence 1 : GLAR</option>
               <option value="12">Licence 1 : GEER</option>
@@ -123,7 +123,7 @@ require '../control/ouvrircompte.func.php';
         <div class="form-group filliere-select" id="L20" style="display: none;">
           <label for="exampleInputPassword1">Filières</label>
           <div>
-            <select type="text" class="form-control" name="FILIERE" id="FILIERE" onclick="">
+            <select type="text" class="form-control" name="FILIERE" id="FILIERE2">
               <option value="">Sélectionner la filière de Licence 2</option>
               <option value="21">Licence 2 : GLAR</option>
               <option value="22">Licence 2 : GEER</option>
@@ -135,7 +135,7 @@ require '../control/ouvrircompte.func.php';
         <div class="form-group filliere-select" id="L30" style="display: none;">
           <label for="exampleInputPassword1">Filières</label>
           <div>
-            <select type="text" class="form-control" name="FILIERES" id="FILIERE">
+            <select type="text" class="form-control" name="FILIERES" id="FILIERE3">
               <option value="">Sélectionner la filière de Licence 3</option>
               <option value="31">Licence 3 : GLAR</option>
               <option value="32">Licence 3 : GEER</option>
@@ -163,6 +163,7 @@ require '../control/ouvrircompte.func.php';
     </div><!-- /connexion -->
   </div>
 </body>
+<script src="../js/jquery.js"></script>
 <script src="../js/jsToFenetre.js"></script>
 
 </html>

@@ -80,7 +80,7 @@
     ?>
     </div>
 
-    <div class="bs-docs-section">
+    <div class="filliere-section">
       <h1 id="thumbnails" class="page-header titre"> <i class="fas fa-folder-open"></i><span class="desc"> Explorez toutes les sections</span></h1>
       <h2 class="sousTitre">Toute les filliéres sont disponible ( <span class="marque">Glar</span>, <span class="marque">Geer</span>, <span class="marque">Gestion</span>, <span class="marque">Réseau Télécom</span> )</h2>
 
@@ -91,7 +91,7 @@
         foreach ($boxs as $img => $home) {
           if ($img) {
             ?>
-            <div class="photoElt home-fill">
+             <div class="photoElt home-fill"> <!-- ajouter "home-fill" pour remettre l'animation -->
               <a href="index.php?page=cours_class_<?= $img?>&home=<?= $home[0]?>&filiere=<?= $home[1]?>"><img src="images/<?= $img?>Box.png" title="<?= $img ?>" alt="<?= $img ?>" /></a>
               <!-- <span><?= $img->TITRE ?></span> -->
             </div>

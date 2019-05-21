@@ -522,8 +522,15 @@ footer .right {
     padding: 0 50px;
 }
 
+.connection-center {
+    /* min-height: 500px; */
+    display: flex;
+    align-content: center;
+    grid-row: 2/3;
+}
 
-/* Partie où on gère la Responsive */
+
+/* Partie où on gère la Responsive ---------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
     .filActu {
@@ -579,6 +586,9 @@ footer .right {
         text-align: center;
     }
     .container-connection {
+        /* position: fixed;
+        top: 50%;
+        left: 50%; */
         width: 100%;
         margin: auto;
         display: grid;

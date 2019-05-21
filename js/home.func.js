@@ -47,3 +47,14 @@
 	setInterval(getForum,5000);
 });
 */
+
+// change the class when it get hovered .
+// $('.filliere-section .photoList .photoElt a img').click(() => {
+//     console.log("initiale class = " + $(this).attr('class'));
+//     if ($(this).attr('class') == "photoElt") {
+//         $(this).attr('class', $(this).attr('class') + " fadeOut animated");
+//     } else {
+//         $(this).attr('class', "photoElt");
+//     }
+//     console.log($(this).attr('class'));
+// });
